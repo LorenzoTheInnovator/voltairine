@@ -73,6 +73,7 @@ help_msg = ('''\
 !gulag
 !hacktheplanet
 !horseshoe
+!indeed
 !insult
 !kitty
 !kronstadt
@@ -87,6 +88,8 @@ help_msg = ('''\
 !marx
 !memes
 !motivation
+!mra
+!mtw
 !mutualism
 !ohwell
 !outside
@@ -382,6 +385,9 @@ def on_message(message):
     elif message.content.startswith('!ideology'):
         yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/ideology.png')
 
+    elif message.content.startswith('!indeed'):
+        yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/indeed.png')
+
 
     elif message.content.startswith('!kitty'):
         yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/kitty.png')
@@ -393,7 +399,7 @@ def on_message(message):
         yield from client.send_message(message.channel, ':books: **The Conquest of Bread **: https://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread\n:books: **The Commune of Paris **: https://theanarchistlibrary.org/library/petr-kropotkin-the-commune-of-paris\n:books: **Mutual Aid: A Factor of Evolution **: https://theanarchistlibrary.org/library/petr-kropotkin-mutual-aid-a-factor-of-evolution\n:books: **Communism and Anarchy**: https://theanarchistlibrary.org/library/petr-kropotkin-communism-and-anarchy')
 
     elif message.content.startswith('!leftcom'):
-        yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/tankie2.png')
+        yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/leftcom.jpg')
 
     elif message.content.startswith('!leftunity'):
         yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/love.png')
@@ -427,6 +433,12 @@ def on_message(message):
 
     elif message.content.startswith('!motivation'):
         yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/motivation.png')
+
+    elif message.content.startswith('!mra'):
+        yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/mra.jpg')
+
+    elif message.content.startswith('!mtw'):
+        yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/mtw.gif')
 
     elif message.content.startswith('!mutualism'):
         yield from client.send_message(message.channel, '"Mutualism is not a specific social, political or economic system. It is—at its core—an ethical philosophy. We begin with mutuality or reciprocity—the Golden Rule, more or less—and then seek to apply that principle in a variety of situations. As a result, under mutualism every meaningfully social relation will have the form of an anarchic encounter between equally unique individuals—free absolutes—no matter what layers of convention we pile on it." \n\n—Shawn P. Wilbur, *"Two-Gun Mutualism and The Golden Rule"* \n\nMutualism is an anti-capitalist economic theory and anarchist school of thought that advocates a society where each person might possess a means of production, either individually or collectively, with trade representing equivalent amounts of labor in a "freed market".\nMutualists believe that it is the state enforcement of capitalist property relations that alienates the working class from the means of production and subsistence and allows exploitation in the forms of profit, interest, and rents. Therefore, they wish to see private property abolished and replaced with possession-and-use, "the land to the cultivator, the mine to the miner, the tool to the laborer."\n\n:books: **Recommended reading**: :books: \n\n**[A Mutualist FAQ]** http://www.mutualist.org/id23.html\n **[Markets Not Capitalism]** https://goo.gl/YM4Gx1 \n**[What is Property?]** https://goo.gl/kkAgKx \n:books: **In-Depth**: :books:\n **[Studies in Mutualist Political Economy]** https://goo.gl/3rcWrn \n**[Kevin Carson\'s blog with links to his books]** http://mutualist.blogspot.ca/ \n**[humanispherian\'s blog with translations of Proudhon]** https://www.mutualism.info/ \n:books: **Further reading**: :books: \n**[C4SS Studies]** https://c4ss.org/content/category/studies \n**[Kevin Carson\'s suggested reading list]** http://www.mutualist.org/id6.html')
@@ -483,7 +495,7 @@ def on_message(message):
         yield from client.send_message(message.channel, '**Max Stirner** (October 25, 1806 – June 26, 1856) was a German philosopher. He is often seen as one of the forerunners of nihilism, existentialism, psychoanalytic theory, postmodernism, and anarchism, especially of individualist anarchism.\n:books: **The Ego and His Own **: https://theanarchistlibrary.org/library/max-stirner-the-ego-and-his-own\n:books: **Art and Religion **: https://theanarchistlibrary.org/library/max-stirner-art-and-religion\n:books: **The False Principle of Our Education **: https://theanarchistlibrary.org/library/max-stirner-the-false-principle-of-our-education\n:books: **Stirner’s Critics **: https://theanarchistlibrary.org/library/max-stirner-stirner-s-critics\nhttp://www.gooseberrycollective.net/bots/stirner.gif')
 
     elif message.content.startswith('!source'):
-        yield from client.send_message(message.channel, 'https://github.com/subvertc/voltairine')
+        yield from client.send_message(message.channel, 'https://github.com/gooseberrycollective/voltairine')
 
     elif message.content.startswith('!tankie'):
         yield from client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/tankie1.png')
