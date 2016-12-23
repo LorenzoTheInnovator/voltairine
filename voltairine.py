@@ -653,5 +653,5 @@ def on_message(message):
 #        yield from client.send_message(message.channel, 'Rolled a ' + random.randint(1,100))
 
 
-
-client.run('token')
+if __name__ == '__main__':
+    client.run('token')
