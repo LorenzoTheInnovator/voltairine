@@ -654,4 +654,5 @@ def on_message(message):
 
 
 if __name__ == '__main__':
-    client.run('token')
+    settings = toml.load("volt_settings.toml")
+    client.run(settings['token'])

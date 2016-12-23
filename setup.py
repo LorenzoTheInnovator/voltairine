@@ -9,7 +9,7 @@ setup(name="voltairine",
       author_email="info@gooseberrycollective.net",
       description="Chat bot for Anarchism discord",
       license="GPL v3",
-      install_requires=["discord.py"],
+      install_requires=["discord.py", "toml"],
       url="https://github.com/gooseberrycollective/voltairine",
       classifiers=["Topic :: Communications :: Chat",
                    "Topic :: Games/Entertainment"])
