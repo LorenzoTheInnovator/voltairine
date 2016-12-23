@@ -663,6 +663,7 @@ async def on_message(message):
 
     else:
         # general chat ai goes here
+        settings = toml.load("volt_settings.toml")
         if settings['pyborg']['learning']:
             learn(message.content)
         if message.content.startswith("<@{}>".format(client.user.id)):
