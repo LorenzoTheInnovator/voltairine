@@ -16,6 +16,8 @@ async def do_nothing_wait(author=None):
     await asyncio.sleep(0)
 
 
+@mock.patch("voltairine.reply")
+@mock.patch('voltairine.learn')
 class BulkTestResponses(unittest.TestCase):
     settings = {
         "pyborg": {"learning": True, "multiplex": True, 
@@ -25,7 +27,7 @@ class BulkTestResponses(unittest.TestCase):
     @mock.patch('discord.Client.user', create=True, return_value="221134985560588289")
     @mock.patch("toml.load")
     @mock.patch("discord.Client.send_message", wraps=do_nothing_msg)
-    def test_responses(self, patched_send, patched_toml, patched_user):
+    def test_responses(self, patched_learn, patched_reply, patched_send, patched_toml, patched_user):
         patched_toml.return_value = self.settings
         commands = help_msg.split("\n")
         # commands = ['!4chan', "!benned3"]
@@ -37,20 +39,20 @@ class BulkTestResponses(unittest.TestCase):
                 type(msg).content = mock.PropertyMock(return_value=command)
                 msg.channel.return_value = "maketotaldestroy"
                 msg.message.author.return_value = "somefucko"
-                # print("calling {}".format(command))
+                print("calling {}".format(command))
                 loop = asyncio.new_event_loop()
                 asyncio.set_event_loop(loop)
                 loop.run_until_complete(on_message(msg))
                 loop.close()
                 last_call = patched_send.call_args
-                # print(last_call)
+                print(last_call)
 
                 self.assertIsInstance(last_call[0][1], str)
 
     @mock.patch('discord.Client.user', create=True, return_value="221134985560588289")
     @mock.patch("toml.load")
     @mock.patch("discord.Client.send_message", wraps=do_nothing_msg)
-    def test_pyborg(self, patched_send, patched_toml, patched_user):
+    def test_pyborg(self, patched_learn, patched_reply, patched_send, patched_toml, patched_user):
         msg = mock.MagicMock()
         type(msg).content = mock.PropertyMock(return_value="Welcome to my twisted mind! lol rawr")
         msg.channel.return_value = "maketotaldestroy"
