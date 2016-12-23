@@ -15,9 +15,18 @@ async def do_nothing_msg(channel, msg):
 async def do_nothing_wait(author=None):
     await asyncio.sleep(0)
 
+
 class BulkTestResponses(unittest.TestCase):
+    settings = {
+        "pyborg": {"learning": True, "multiplex": True, 
+                   "server": "localhost", "port": 2001},
+        "token": "foo"
+    }
+    @mock.patch('discord.Client.user', create=True, return_value="221134985560588289")
+    @mock.patch("toml.load")
     @mock.patch("discord.Client.send_message", wraps=do_nothing_msg)
-    def test_responses(self, patched_send):
+    def test_responses(self, patched_send, patched_toml, patched_user):
+        patched_toml.return_value = self.settings
         commands = help_msg.split("\n")
         # commands = ['!4chan', "!benned3"]
         for command in commands:
@@ -38,11 +47,11 @@ class BulkTestResponses(unittest.TestCase):
 
                 self.assertIsInstance(last_call[0][1], str)
 
-        # for command in help_msg.split("\n"):
-        #     if command not in  ["!help", "!cowsay", "!cowthink"]:
-        #         msg = mock.MagicMock()
-        #         msg.content.return_value = command
-        #         msg.channel.return_value = "maketotaldestroy"
-        #         print("calling {}".format(command))
-        #         self.loop.run_until_complete(on_message(msg))
-        #         print(patched_send.calls)
+    @mock.patch('discord.Client.user', create=True, return_value="221134985560588289")
+    @mock.patch("toml.load")
+    @mock.patch("discord.Client.send_message", wraps=do_nothing_msg)
+    def test_pyborg(self, patched_send, patched_toml, patched_user):
+        msg = mock.MagicMock()
+        type(msg).content = mock.PropertyMock(return_value="Welcome to my twisted mind! lol rawr")
+        msg.channel.return_value = "maketotaldestroy"
+        msg.message.author.return_value = "somefucko"
