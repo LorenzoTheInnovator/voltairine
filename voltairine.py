@@ -1,13 +1,17 @@
 import argparse
 import random
+import logging
 import subprocess
 import textwrap
 
 import asyncio
 import discord
+import requests
 import toml
 
 client = discord.Client()
+
+logger = logging.getLogger(__name__)
 
 
 #@client.event#
@@ -190,6 +194,31 @@ def get_border(lines, index):
     else:
         return [ "|", "|" ]
 
+
+def learn(body):
+    """thin wrapper for learn to switch to multiplex mode"""
+    settings = toml.load("volt_settings.toml")
+    if settings['pyborg']['multiplex']:
+        ret = requests.post("http://{}:{}/learn".format(settings['pyborg']['server'], settings['pyborg']['port']), data={"body": body})
+        if ret.status_code > 499:
+            logger.error("Internal Server Error in pyborg_http. see logs.")
+        else:
+            ret.raise_for_status()
+
+def reply(body):
+    """thin wrapper for reply to switch to multiplex mode"""
+    settings = toml.load("volt_settings.toml")
+    if settings['pyborg']['multiplex']:
+        ret = requests.post("http://{}:{}/reply".format(settings['pyborg']['server'], settings['pyborg']['port']), data={"body": body})
+        if ret.status_code == requests.codes.ok:
+            reply = ret.text
+            logger.debug("got reply: %s", reply)
+        elif ret.status_code > 499:
+            logger.error("Internal Server Error in pyborg_http. see logs.")
+            return
+        else:
+            ret.raise_for_status()
+        return reply
 
 @client.event
 async def on_message(message):
@@ -632,11 +661,25 @@ async def on_message(message):
             user_gold[message.author]-=5
             await client.send_message(message.channel, '```'+message.author.name+' bought a potion.\nThank you for visiting the shop!```')
 
-    
+    else:
+        # general chat ai goes here
+        if settings['pyborg']['learning']:
+            learn(message.content)
+        if message.content.startswith("<@{}>".format(client.user.id)):
+            clean = clean_msg(message)
+            msg = reply(clean)
+            logger.debug("on message: %s" % msg)
+            if msg:
+                logger.debug("Sending message...")
+                msg = msg.replace("#nick", str(message.author.mention))
+                await client.send_message(message.channel, msg)
 #    elif message.content.startswith('!d100'):
 #       await User.mention(message.author)
 #        yield from client.send_message(message.channel, 'Rolled a ' + random.randint(1,100))
 
+
+def clean_msg(message):
+    return ' '.join(message.content.split()[1:])
 
 if __name__ == '__main__':
     settings = toml.load("volt_settings.toml")
