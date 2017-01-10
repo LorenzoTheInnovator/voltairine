@@ -291,21 +291,6 @@ async def on_message(message):
     elif message.content.startswith('!bakunin'):
         await client.send_message(message.channel, ':books: **Statism and Anarchy**: https://theanarchistlibrary.org/library/michail-bakunin-statism-and-anarchy\n:books: **God and the State**: https://theanarchistlibrary.org/library/michail-bakunin-god-and-the-state\n:books: **Marxism, Freedom and the State**: https://theanarchistlibrary.org/library/michail-bakunin-marxism-freedom-and-the-state\n:books: **The Capitalist System**: https://theanarchistlibrary.org/library/michail-bakunin-the-capitalist-system')
 
-    elif message.content.startswith('!benned1'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/benned1.png')
-
-    elif message.content.startswith('!benned2'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/benned2.png')
-
-    elif message.content.startswith('!benned3'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/benned3.png')
-
-    elif message.content.startswith('!benned4'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/benned4.png')
-
-    elif message.content.startswith('!benned5'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/benned5.gif')
-
     elif message.content.startswith('!bestshit'):
         await client.send_message(message.channel, ':books: CONQUEST OF BREAD MOTHERFUCKER\nhttps://theanarchistlibrary.org/library/petr-kropotkin-the-conquest-of-bread \nABC OF ANARCHISM IF YOU LIKE IT IN SIMPLE ENGLISH! \nhttps://libcom.org/library/abc-anarchism-alexander-berkman \nCOMMUNIST MANIFESTO FOR THE CLASSIC SHIT :ok_hand: :ok_hand: :ok_hand:  \nhttps://www.marxists.org/archive/marx/works/1848/communist-manifesto/')
 
