@@ -46,8 +46,8 @@ class BulkTestResponses(unittest.TestCase):
                 loop.close()
                 last_call = patched_send.call_args
                 print(last_call)
-
-                self.assertIsInstance(last_call[0][1], str)
+                if last_call:
+                    self.assertIsInstance(last_call[0][1], str)
 
     @mock.patch('discord.Client.user', create=True, return_value="221134985560588289")
     @mock.patch("toml.load")
