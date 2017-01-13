@@ -8,3 +8,6 @@ script:  tox
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+notifications:
+  webhooks: https://discordapp.com/api/webhooks/269325473312407552/CDWAn_COXdkt3sDsDN2z0acLjhRDObovBNOXzl0vJaASeEgvYyGoddpZD_P5iacmivto
