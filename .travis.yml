@@ -11,5 +11,5 @@ after_success:
 
 notifications:
   webhooks: 
-    - "https://discordapp.com/api/webhooks/269325473312407552/CDWAn_COXdkt3sDsDN2z0acLjhRDObovBNOXzl0vJaASeEgvYyGoddpZD_P5iacmivto/slack"
+    - "https://discordapp.com/api/webhooks/269325473312407552/CDWAn_COXdkt3sDsDN2z0acLjhRDObovBNOXzl0vJaASeEgvYyGoddpZD_P5iacmivto/github"
     - "https://scalar.vector.im/api/neb/services/hooks/dHJhdmlzLWNpLyU0MGphY2tvbGFzJTNBbWF0cml4Lm9yZy8lMjF3c3pjZ3dmaHp6bGVCTUNlanIlM0FtYXRyaXgub3Jn"
