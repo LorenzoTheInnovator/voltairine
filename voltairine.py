@@ -650,7 +650,9 @@ async def on_message(message):
         # general chat ai goes here
         settings = toml.load("volt_settings.toml")
         if settings['pyborg']['learning']:
-            learn(message.content)
+            # check if we're allowed to learn here
+            if message.channel.name not in settings['discord']['ignored_channels']:
+                learn(message.content)
         if message.content.startswith("<@{}>".format(client.user.id)):
             clean = clean_msg(message)
             msg = reply(clean)
