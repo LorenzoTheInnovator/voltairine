@@ -132,6 +132,15 @@ v0.1.1
 -Added encounters
 -Added potions
 -Added fresh and wtf
+v0.1.2
+-added dozens of new commands
+-added cowsay
+v0.1.3
+-added pyborg
+v0.1.4
+-added catsnake command
+-added Fourcault command
+-fixed anticiv command
 ''')
     #v0.1.2
     #- added catsnake commmand
