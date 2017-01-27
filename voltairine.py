@@ -73,6 +73,7 @@ help_msg = ('''\
 !facepalm
 !fascist
 !feminism
+!foucault
 !fresh
 !fullcommunism
 !goldman
@@ -140,7 +141,7 @@ v0.1.3
 -removed benned commands, now with Emma
 v0.1.4
 -added catsnake command
--added Fourcault command
+-added Foucault command
 -fixed anticiv command
 ''')
     #v0.1.2
@@ -363,6 +364,9 @@ async def on_message(message):
 
     elif message.content.startswith('!ezln'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/ezlnisbae.png')
+        
+    elif message.content.startswith('!foucault'):
+        await client.send_message(message.channel, ':books: **Power/Knowledge**\n Power/Knowledge is a selection of content done by Foucault to encapsulate the vision for his overarching project. Recommended as a starting place for reading Foucault, especially Two Lectures. \n http://bit.do/c7aoj \n**History of Sexuality** \nhttp://bit.do/c7aoq \n **Discipline and Punish: The Birth of the Prison** \n http://bit.do/c7aor \n **Society must be defended** \n http://bit.do/c7aot \n **Paul Rainbow Foucault Reader** \n http://bit.do/c7aox')
 
     elif message.content.startswith('!fullcommunism'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/fc.png')
