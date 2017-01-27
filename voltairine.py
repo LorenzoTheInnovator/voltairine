@@ -137,6 +137,7 @@ v0.1.2
 -added cowsay
 v0.1.3
 -added pyborg
+-removed benned commands, now with Emma
 v0.1.4
 -added catsnake command
 -added Fourcault command
