@@ -324,9 +324,8 @@ async def on_message(message):
     elif message.content.startswith('!bubbles'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/bubbles.png')
         
-        elif message.content.startswith('!catsnake'):
+    elif message.content.startswith('!catsnake'):
         await client.send_message(message.channel, 'http://img-cache.cdn.gaiaonline.com/ebd06c23c8dc3f087cd6d6fc5f31cfb6/http://img.photobucket.com/albums/v633/in-dis-guise/7_CatSnake.jpg')
-
 
     elif message.content.startswith('!chart'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/chart1.png\nhttp://www.gooseberrycollective.net/bots/chart2.png')
