@@ -298,7 +298,7 @@ async def on_message(message):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/cyberpunk.gif')
 
     elif message.content.startswith('!durruti'):
-        await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/durruti.png')
+        await client.send_message(message.channel, '**Buenaventura Durruti**(14 July 1896 – 20 November 1936) was an anarcho-syndicalist militant involved with the CNT, FAI and other anarchist organisations during the period leading up to and including the Spanish Civil War. Durruti played an influential role during the Spanish Revolution and is remembered as a hero in the Anarchist movement. Durrutis body was transported across the country to Barcelona for his funeral. Over a half million people filled the streets to accompany the cortege during its route to the Montjuïc cemetery. It was the last large-scale public demonstration of anarchist strength of numbers during the bitter and bloody civil war.\n\n:books: **Buenaventura Durruti by Joe King**: http://bit.do/c7T4A\n\n:books: **Durruti Is Dead, Yet Living by Emma Goldman**: http://bit.do/c7T4D \n\n:books: **Life in Revolutionary Barcelona by Manolo Gonzalez**: http://bit.do/c7T4K \n\nhttp://www.gooseberrycollective.net/bots/bonanno.jpg')
 
     elif message.content.startswith('!ezln'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/ezlnisbae.png')
