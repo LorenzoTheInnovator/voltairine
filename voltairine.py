@@ -58,6 +58,7 @@ help_msg = ('''\
 !goldman
 !kropotkin
 !makhno
+!most
 !mutualism
 !proudhon
 !stirner
@@ -386,6 +387,9 @@ async def on_message(message):
 
     elif message.content.startswith('!marx'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/marx1.png')
+        
+    elif message.content.startswith('!most'):
+        await client.send_message(message.channel, '**Johann Most** (Feb 5, 1846 – March 17, 1906), was a German-American anarchist politician, newspaper editor, and orator. He is credited with popularizing the concept of "Propaganda of the deed".\n\n:books: **Anarchist Communism **: http://bit.do/c8rMK\n\n:books: **The Beast of Property **: http://bit.do/c8rMQ\n\n:books: **The Social Monster **: http://bit.do/c8rMT')
 
     elif message.content.startswith('!memes'):
         await client.send_message(message.channel, 'https://we.riseup.net/goatgooseberry/meme-commands')
