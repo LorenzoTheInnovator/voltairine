@@ -2,7 +2,7 @@
 
 from setuptools import setup
 setup(name="voltairine",
-      version="0.2",
+      version="0.1.4",
       scripts=['voltairine.py'],
       author="Goat and Gooseberry Collective",
       author_email="info@gooseberrycollective.net",
