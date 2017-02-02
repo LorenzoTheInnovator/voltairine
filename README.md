@@ -1,7 +1,4 @@
-# voltairine [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
-
-Chat bot for Anarchism discord. 
-
+# Voltairine [![forthebadge](http://forthebadge.com/images/badges/gluten-free.svg)](http://forthebadge.com)
 [![codecov](https://codecov.io/gh/gooseberrycollective/voltairine/branch/master/graph/badge.svg)](https://codecov.io/gh/gooseberrycollective/voltairine)
 [![Build Status](https://travis-ci.org/gooseberrycollective/voltairine.svg?branch=master)](https://travis-ci.org/gooseberrycollective/voltairine)
 [![Code Climate](https://codeclimate.com/github/gooseberrycollective/voltairine/badges/gpa.svg)](https://codeclimate.com/github/gooseberrycollective/voltairine)
@@ -10,6 +7,8 @@ Chat bot for Anarchism discord.
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
 
+
+Chat bot for Anarchism discord.
 
 # Commands
 
