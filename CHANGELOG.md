@@ -41,3 +41,6 @@
 -added short urls to edu commands
 
 -re-did help command
+
+-added !most and !dejacque command
+
