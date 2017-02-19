@@ -10,32 +10,8 @@
 
 Chat bot for Anarchism discord.
 
-# Commands
+<img src="http://gooseberrycollective.net/bots/voltreadme1.jpg" width="604">
 
-## Educational
-
-| Command        | Function           |
-| ------------- |:-------------:|
-| !afaq         | Anarchist FAQ |
-| !anarchism    | General Info      |
-| !ancom        | Anarchist Communist Essential Readings      |
-| !anfem        | Anarchist-Feminist Essential Readings      |
-| !anti-civ     | Anti-Civ Essential Readings      |
-| !bakunin      | Mikhail Bakunin Essential Readings      |
-| !berkman      | Alexander Berkman Essential Readings       |
-| !bonanno      | Bonanno Essential Readings      |
-| !bookchin     | Bookchin Essential Readings      |
-| !bookclub     | Our Bookclub      |
-| !books        | Key Reading List      |
-| !chomsky      | Noam Chomsky Essential Readings      |
-| !durruti      | Durruti Essential Readings      |
-| !feminism     | General Info      |
-| !goldman      | Emma Goldman Essential Readings      |
-| !kropotkin    | Peter Kropotkin Essential Readings      |
-| !makhno       | Nestor Makhno Essential Readings      |
-| !mutualism    | Mutalist Essential Readings      |
-| !proudhon     | Pierre Proudhon Essential Readings      |
-| !stirner      | Max Stirner Essential Readings      |
 
 # Install
 
@@ -53,5 +29,4 @@ multiplex = true
 learning = true
 ```
 
-[![forthebadge](http://forthebadge.com/images/badges/built-with-resentment.svg)](http://forthebadge.com)
 [![forthebadge](http://forthebadge.com/images/badges/made-with-python.svg)](http://forthebadge.com)
