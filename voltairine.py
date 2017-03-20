@@ -294,6 +294,9 @@ async def on_message(message):
     elif message.content.startswith('!communism'):
         await client.send_message(message.channel, 'A spectre:ghost::ghost: is haunting:ghost: :earth_africa:Europe:earth_africa: — the spectre :ghost:of communism☭☭☭☭. All the :muscle::muscle:powers of old Europe:muscle: have entered into a :pray: holy alliance :pray:to exorcise this spectre:ghost::ghost::ghost:: Pope :poop::poop:and Tsar:poop::thumbsdown::thumbsdown:, Metternich:poop: and Guizot:poop::poop::poop:')
 
+    elif message.content.startswith('!confed'):
+        await client.send_message(message.channel, 'http://gooseberrycollective.net/bots/confed.png')
+
     elif message.content.startswith('!cpusa'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/cpusa.png')
 
@@ -390,6 +393,9 @@ async def on_message(message):
         
     elif message.content.startswith('!most'):
         await client.send_message(message.channel, '**Johann Most** (Feb 5, 1846 – March 17, 1906), was a German-American anarchist politician, newspaper editor, and orator. He is credited with popularizing the concept of "Propaganda of the deed".\n\n:books: **Anarchist Communism **: http://bit.do/c8rMK\n\n:books: **The Beast of Property **: http://bit.do/c8rMQ\n\n:books: **The Social Monster **: http://bit.do/c8rMT')
+
+    elif message.content.startswith('!meditation'):
+        await client.send_message(message.channel, 'Meditation is the act of training the mind to focus, to develop concentration to see the workings of the mind, to realize one\'s true nature, or as an end in itself. It is a central practice in Buddhism, Hinduism, Daoism, and many other religions, and can also be practiced for secular purposes.\n\n:books: Recommended Reading\n\nHow to Meditate (Zen) - http://bit.do/diSmH\n\nWith Each & Every Breath - http://bit.do/diSoF')
 
     elif message.content.startswith('!memes'):
         await client.send_message(message.channel, 'https://we.riseup.net/goatgooseberry/meme-commands')
