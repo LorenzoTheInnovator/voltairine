@@ -468,6 +468,9 @@ async def on_message(message):
     elif message.content.startswith('!vaporwave'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/vaporwave.png')
 
+    elif message.content.startswith('!retroshare'):
+        await client.send_message(message.channel, 'Retroshare is an encrypted, decentralized Friend-to-Friend network. Features include Chat, Mail, IM, Filesharing, Forums, Feeds, and VoIP. It can be downloaded and installed from http://retroshare.net, Share your key with others after installing to join the larger network.')
+
     elif message.content.startswith('!vegan'):
         await client.send_message(message.channel, 'http://www.gooseberrycollective.net/bots/vegan.png')
 
