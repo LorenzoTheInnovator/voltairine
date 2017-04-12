@@ -60,7 +60,7 @@ changelog = ('''
 -added catsnake command
 -added Foucault command
 -fixed anticiv command
--added short urls to edu commands
+-added short urls to education commands
 ''')
 
 user_gold = {}
